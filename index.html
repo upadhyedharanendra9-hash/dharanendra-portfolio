@@ -13,145 +13,229 @@ tailwind.config = { darkMode: 'class' }
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
 <style>
-body {
-  font-family: 'Inter', sans-serif;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
-/* Animated Gradient Background */
-.bg-animated {
-  background: linear-gradient(-45deg, #0f172a, #1e40af, #7c3aed, #0f172a);
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
-}
-
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* Fade Animation */
+body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
 .fade { opacity: 0; transform: translateY(40px); transition: 0.8s ease; }
 .fade.show { opacity: 1; transform: translateY(0); }
-
-/* Glass Effect */
-.glass {
-  backdrop-filter: blur(15px);
-  background: rgba(255,255,255,0.05);
+.skill-bar { width: 0; transition: width 1.5s ease; }
+.gradient-bg {
+background: linear-gradient(-45deg, #0f172a, #0a1f44, #0b2a5e, #001f3f);
+background-size: 400% 400%;
+animation: gradientMove 15s ease infinite;
 }
-
-/* Magnetic Button */
-.magnetic {
-  transition: transform 0.2s ease;
+@keyframes gradientMove {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
 }
 </style>
 </head>
 
-<body class="bg-animated text-white transition duration-500">
+<body class="bg-slate-950 text-gray-100 transition duration-500">
 
 <!-- NAVBAR -->
-<nav class="fixed w-full glass z-50">
-<div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-<div class="font-bold text-xl">Dharanendra Upadhye</div>
-<div class="flex gap-6 items-center">
-<a href="#projects">Projects</a>
-<a href="#skills">Skills</a>
-<button onclick="toggleDark()">🌙</button>
+<nav class="fixed w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-700 z-50">
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+<div class="font-bold text-xl text-blue-400">Dharanendra Upadhye</div>
+
+<div class="flex gap-6 items-center text-sm">
+<a href="#about" class="hover:text-blue-400">About</a>
+<a href="#skills" class="hover:text-blue-400">Skills</a>
+<a href="#projects" class="hover:text-blue-400">Projects</a>
+<a href="#experience" class="hover:text-blue-400">Experience</a>
+<a href="#education" class="hover:text-blue-400">Education</a>
+<a href="Dharanendra_Data_Analyst.pdf" download
+class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700">
+Resume
+</a>
+<button onclick="toggleDark()" class="text-lg">🌗</button>
 </div>
 </div>
 </nav>
 
 <!-- HERO -->
-<section class="min-h-screen flex items-center pt-24">
-<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+<section class="min-h-screen flex items-center gradient-bg pt-24">
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
 
 <div class="fade">
-<h1 class="text-6xl font-extrabold leading-tight">
-Turning Data into <span class="text-blue-400">Decisions</span>
+<h1 class="text-5xl md:text-6xl font-bold leading-tight">
+Data Analyst <br>
+<span class="text-blue-400">Python | SQL | Power BI</span>
 </h1>
 
-<p class="mt-6 text-xl text-gray-200">
-Data Analyst skilled in Python, SQL & Business Intelligence.
-Building automation pipelines and extracting insights from complex datasets.
+<p class="mt-6 text-lg text-gray-300">
+Entry-level Data Analyst transitioning from Firmware Engineering with strong
+experience in data extraction, log analysis, automation, validation,
+and dashboard development to support data-driven business decisions.
 </p>
 
 <div class="mt-8 flex gap-4">
-<button class="magnetic bg-blue-600 px-6 py-3 rounded-lg">
+<a href="#projects"
+class="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700">
 View Projects
-</button>
-<button class="magnetic border px-6 py-3 rounded-lg">
+</a>
+
+<a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306"
+target="_blank"
+class="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-400 hover:text-slate-900">
 LinkedIn
-</button>
+</a>
 </div>
 </div>
 
 <div class="fade flex justify-center">
-<img src="profile.jpeg"
-class="w-80 h-80 rounded-full object-cover border-4 border-blue-400 shadow-2xl">
+<img src="profile.jpg"
+class="w-80 h-80 rounded-full object-cover border-4 border-blue-500 shadow-2xl">
 </div>
 
 </div>
 </section>
 
-<!-- COUNTERS -->
-<section class="py-20 text-center">
-<div class="max-w-5xl mx-auto grid md:grid-cols-3 gap-12">
+<!-- ABOUT -->
+<section id="about" class="py-20 bg-slate-900">
+<div class="max-w-4xl mx-auto px-6 text-center fade">
+<h2 class="text-4xl font-bold text-blue-400 mb-8">Profile</h2>
+<p class="text-lg text-gray-300">
+Seeking a Data Analyst role to apply analytical thinking, data interpretation,
+EDA, KPI development, and dashboard creation to generate business insights.
+</p>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="py-20">
+<div class="max-w-5xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-center text-blue-400 mb-12 fade">Technical Skills</h2>
+
+<div class="space-y-8">
 
 <div class="fade">
-<h2 class="text-5xl font-bold counter" data-target="5">0</h2>
-<p class="mt-4 text-gray-300">Major Projects</p>
+<h3 class="mb-2">Python (pandas, numpy, matplotlib)</h3>
+<div class="bg-slate-700 h-3 rounded-full">
+<div class="skill-bar bg-blue-500 h-3 rounded-full" data-width="90%"></div>
+</div>
 </div>
 
 <div class="fade">
-<h2 class="text-5xl font-bold counter" data-target="2">0</h2>
-<p class="mt-4 text-gray-300">Years Technical Experience</p>
+<h3 class="mb-2">SQL (Joins, Subqueries, Aggregations, Window Functions)</h3>
+<div class="bg-slate-700 h-3 rounded-full">
+<div class="skill-bar bg-blue-500 h-3 rounded-full" data-width="85%"></div>
+</div>
 </div>
 
 <div class="fade">
-<h2 class="text-5xl font-bold counter" data-target="8">0</h2>
-<p class="mt-4 text-gray-300">Tools & Technologies</p>
+<h3 class="mb-2">Power BI & Excel Dashboards</h3>
+<div class="bg-slate-700 h-3 rounded-full">
+<div class="skill-bar bg-blue-500 h-3 rounded-full" data-width="80%"></div>
+</div>
 </div>
 
+<div class="fade">
+<h3 class="mb-2">Databases: PostgreSQL | MySQL | MongoDB | Snowflake</h3>
+</div>
+
+<div class="fade">
+<h3 class="mb-2">Tools: Git/GitHub | JIRA | Confluence</h3>
+</div>
+
+</div>
 </div>
 </section>
 
 <!-- PROJECTS -->
-<section id="projects" class="py-20">
-<div class="max-w-6xl mx-auto px-6">
-<h2 class="text-4xl font-bold text-center mb-16 fade">Featured Projects</h2>
+<section id="projects" class="py-20 bg-slate-900">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl font-bold text-center text-blue-400 mb-16 fade">
+Data Analytics Projects
+</h2>
 
-<div class="grid md:grid-cols-3 gap-8">
+<div class="grid md:grid-cols-2 gap-10">
 
-<div class="glass p-6 rounded-xl fade">
-<h3 class="text-xl font-bold">Purchase Pattern Analysis</h3>
-<p class="mt-4 text-gray-300">
-Built SQL & Power BI dashboards for KPI tracking and segmentation.
-</p>
+<div class="bg-slate-800 p-8 rounded-xl shadow fade">
+<h3 class="text-xl font-bold mb-4">Purchase Pattern Analysis</h3>
+<ul class="list-disc ml-5 space-y-2 text-gray-300">
+<li>Analyzed customer transaction data for purchase trends</li>
+<li>Performed data cleaning & EDA using Python & SQL</li>
+<li>Built interactive Power BI dashboards with KPIs</li>
+</ul>
 </div>
 
-<div class="glass p-6 rounded-xl fade">
-<h3 class="text-xl font-bold">System Log Automation</h3>
-<p class="mt-4 text-gray-300">
-Automated large-scale unstructured log processing.
-</p>
+<div class="bg-slate-800 p-8 rounded-xl shadow fade">
+<h3 class="text-xl font-bold mb-4">Movie Database Analysis</h3>
+<ul class="list-disc ml-5 space-y-2 text-gray-300">
+<li>Advanced SQL queries using joins & window functions</li>
+<li>Revenue & popularity trend analysis</li>
+<li>Director productivity & genre insights</li>
+</ul>
 </div>
 
-<div class="glass p-6 rounded-xl fade">
-<h3 class="text-xl font-bold">Movie SQL Analysis</h3>
-<p class="mt-4 text-gray-300">
-Advanced SQL insights on revenue and performance.
-</p>
+<div class="bg-slate-800 p-8 rounded-xl shadow fade">
+<h3 class="text-xl font-bold mb-4">System Log Analysis & Automation</h3>
+<ul class="list-disc ml-5 space-y-2 text-gray-300">
+<li>Processed large device logs</li>
+<li>Automated validation scripts using Python</li>
+<li>Converted unstructured logs to structured datasets</li>
+</ul>
 </div>
 
 </div>
 </div>
 </section>
 
-<footer class="py-12 text-center glass">
-<p>Open to Data Analyst Opportunities</p>
-<p class="mt-2 text-gray-300">upadhyedharanendra9@gmail.com</p>
+<!-- EXPERIENCE -->
+<section id="experience" class="py-20">
+<div class="max-w-6xl mx-auto px-6 fade">
+<h2 class="text-4xl font-bold text-center text-blue-400 mb-12">
+Professional Experience
+</h2>
+
+<div class="bg-slate-800 p-8 rounded-xl shadow">
+<h3 class="text-2xl font-semibold">
+Firmware Engineer — Bits N Bytes Soft Pvt. Ltd.
+</h3>
+<p class="mt-2 text-gray-400">Jun 2024 – Present</p>
+
+<ul class="mt-6 list-disc ml-6 space-y-2 text-gray-300">
+<li>Extracted and analyzed embedded operational data</li>
+<li>Worked with CAN & UART communication streams</li>
+<li>Automated data validation using Python</li>
+<li>Ensured structured cloud-ready datasets</li>
+<li>Collaborated using JIRA & Confluence</li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education" class="py-20 bg-slate-900">
+<div class="max-w-4xl mx-auto px-6 text-center fade">
+<h2 class="text-4xl font-bold text-blue-400 mb-8">Education</h2>
+<p class="text-xl font-semibold">
+B.E. Electrical & Electronics Engineering
+</p>
+<p class="text-gray-300 mt-2">
+KLS GIT, Belagavi (2020 – 2023)
+</p>
+<p class="mt-4 text-blue-400 font-semibold">CGPA: 8.01</p>
+</div>
+</section>
+
+<!-- STRENGTHS -->
+<section class="py-20">
+<div class="max-w-4xl mx-auto px-6 text-center fade">
+<h2 class="text-4xl font-bold text-blue-400 mb-8">Strengths</h2>
+<div class="flex flex-wrap justify-center gap-4">
+<span class="bg-blue-600 px-4 py-2 rounded-full">Analytical Thinking</span>
+<span class="bg-blue-600 px-4 py-2 rounded-full">Data Interpretation</span>
+<span class="bg-blue-600 px-4 py-2 rounded-full">Problem Solving</span>
+<span class="bg-blue-600 px-4 py-2 rounded-full">Quick Learner</span>
+</div>
+</div>
+</section>
+
+<footer class="py-12 text-center bg-slate-900 border-t border-slate-700">
+<p>📧 upadhyedharanendra9@gmail.com</p>
+<p>📞 +91 8762031009</p>
+<p class="mt-4 text-gray-400">© 2026 Dharanendra Upadhye</p>
 </footer>
 
 <script>
@@ -159,7 +243,6 @@ function toggleDark(){
 document.documentElement.classList.toggle('dark');
 }
 
-/* Fade In */
 const observer = new IntersectionObserver(entries=>{
 entries.forEach(entry=>{
 if(entry.isIntersecting){
@@ -169,36 +252,14 @@ entry.target.classList.add('show');
 });
 document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
 
-/* Animated Counters */
-const counters = document.querySelectorAll('.counter');
-const speed = 200;
-counters.forEach(counter=>{
-const update = ()=>{
-const target = +counter.getAttribute('data-target');
-const count = +counter.innerText;
-const inc = target / speed;
-if(count < target){
-counter.innerText = Math.ceil(count + inc);
-setTimeout(update, 10);
-}else{
-counter.innerText = target;
+const skillObserver = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.style.width = entry.target.getAttribute('data-width');
 }
-};
-update();
-});
-
-/* Magnetic Effect */
-document.querySelectorAll('.magnetic').forEach(btn=>{
-btn.addEventListener('mousemove', e=>{
-const rect = btn.getBoundingClientRect();
-const x = e.clientX - rect.left - rect.width/2;
-const y = e.clientY - rect.top - rect.height/2;
-btn.style.transform = `translate(${x*0.2}px, ${y*0.2}px)`;
-});
-btn.addEventListener('mouseleave', ()=>{
-btn.style.transform = 'translate(0,0)';
 });
 });
+document.querySelectorAll('.skill-bar').forEach(bar=>skillObserver.observe(bar));
 </script>
 
 </body>
