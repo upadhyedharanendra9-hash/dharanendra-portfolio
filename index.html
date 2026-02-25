@@ -3,244 +3,207 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dharanendra Upadhye | Data Analyst</title>
+<title>Dharanendra Upadhye | Data Analyst Fresher</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = { darkMode: 'class' }
-</script>
-
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
-body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-.fade { opacity: 0; transform: translateY(40px); transition: 0.8s ease; }
-.fade.show { opacity: 1; transform: translateY(0); }
-.skill-bar { width: 0; transition: width 1.5s ease; }
-.gradient-bg {
-background: linear-gradient(-45deg, #0f172a, #0a1f44, #0b2a5e, #001f3f);
-background-size: 400% 400%;
-animation: gradientMove 15s ease infinite;
+body { font-family: 'Segoe UI', system-ui, sans-serif; }
+
+.hero {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
 }
-@keyframes gradientMove {
-0% { background-position: 0% 50%; }
-50% { background-position: 100% 50%; }
-100% { background-position: 0% 50%; }
+
+.card {
+  transition: all 0.4s ease;
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,255,255,0.1);
+}
+
+@keyframes ring {
+  0% { transform: rotate(0); }
+  15% { transform: rotate(15deg); }
+  30% { transform: rotate(-10deg); }
+  45% { transform: rotate(15deg); }
+  60% { transform: rotate(-5deg); }
+  75% { transform: rotate(10deg); }
+  100% { transform: rotate(0); }
+}
+
+.ringing {
+  display: inline-block;
+  animation: ring 1.5s infinite;
 }
 </style>
 </head>
 
-<body class="bg-slate-950 text-gray-100 transition duration-500">
+<body class="bg-zinc-950 text-white">
 
-<!-- NAVBAR -->
-<nav class="fixed w-full bg-slate-900/80 backdrop-blur-md border-b border-slate-700 z-50">
-<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-<div class="font-bold text-xl text-blue-400">Dharanendra Upadhye</div>
+<!-- Navbar -->
+<nav class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-md z-50 border-b border-zinc-800">
+  <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+    <div class="text-2xl font-bold text-cyan-400">Dharanendra Upadhye</div>
 
-<div class="flex gap-6 items-center text-sm">
-<a href="#about" class="hover:text-blue-400">About</a>
-<a href="#skills" class="hover:text-blue-400">Skills</a>
-<a href="#projects" class="hover:text-blue-400">Projects</a>
-<a href="#experience" class="hover:text-blue-400">Experience</a>
-<a href="#education" class="hover:text-blue-400">Education</a>
-<a href="Dharanendra_Data_Analyst.pdf" download
-class="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700">
-Resume
-</a>
-<button onclick="toggleDark()" class="text-lg">🌗</button>
-</div>
-</div>
+    <a href="Dharanendra_Data_Analyst.pdf" download
+       class="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-full font-semibold flex items-center gap-2">
+      <i class="fas fa-download"></i> Download CV
+    </a>
+  </div>
 </nav>
 
-<!-- HERO -->
-<section class="min-h-screen flex items-center gradient-bg pt-24">
-<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<!-- Hero -->
+<section class="hero min-h-screen flex items-center pt-20">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
-<div class="fade">
-<h1 class="text-5xl md:text-6xl font-bold leading-tight">
-Data Analyst <br>
-<span class="text-blue-400">Python | SQL | Power BI</span>
-</h1>
+    <div>
+      <h1 class="text-5xl md:text-6xl font-bold">DHARANENDRA UPADHYE</h1>
+      <p class="text-2xl mt-3 text-cyan-400">
+        Data Analyst Fresher — Python — SQL — Power BI
+      </p>
 
-<p class="mt-6 text-lg text-gray-300">
-Entry-level Data Analyst transitioning from Firmware Engineering with strong
-experience in data extraction, log analysis, automation, validation,
-and dashboard development to support data-driven business decisions.
-</p>
+      <div class="mt-8 flex flex-wrap gap-6 text-lg items-center">
+        <a href="mailto:upadhyedharanendra9@gmail.com" class="hover:text-cyan-400">
+          upadhyedharanendra9@gmail.com
+        </a>
 
-<div class="mt-8 flex gap-4">
-<a href="#projects"
-class="bg-blue-600 px-6 py-3 rounded-lg hover:bg-blue-700">
-View Projects
-</a>
+        <a href="tel:+918762031009" class="hover:text-cyan-400 flex items-center gap-2">
+          <span class="ringing">📞</span> +91 8762031009
+        </a>
 
-<a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306"
-target="_blank"
-class="border border-blue-400 px-6 py-3 rounded-lg hover:bg-blue-400 hover:text-slate-900">
-LinkedIn
-</a>
-</div>
-</div>
+        <a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306"
+           target="_blank" class="hover:text-cyan-400">
+          LinkedIn
+        </a>
+      </div>
+    </div>
 
-<div class="fade flex justify-center">
-<img src="profile.jpeg"
-class="w-80 h-80 rounded-full object-cover border-4 border-blue-500 shadow-2xl"
-alt="Dharanendra Upadhye">
-</div>
+    <div class="flex justify-center">
+      <img src="profile.jpeg"
+           alt="Dharanendra Upadhye"
+           class="w-80 h-80 object-cover rounded-3xl border-8 border-cyan-400/30 shadow-2xl">
+    </div>
 
-</div>
+  </div>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="py-20 bg-slate-900">
-<div class="max-w-4xl mx-auto px-6 text-center fade">
-<h2 class="text-4xl font-bold text-blue-400 mb-8">Profile</h2>
-<p class="text-lg text-gray-300">
-Seeking a Data Analyst role to apply analytical thinking, data interpretation,
-EDA, KPI development, and dashboard creation to generate business insights.
-</p>
-</div>
+<!-- Technical Skills -->
+<section class="bg-zinc-900 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-10 text-cyan-400">Technical Skills</h2>
+
+    <div class="grid md:grid-cols-2 gap-8 text-lg">
+
+      <div class="bg-zinc-800 p-6 rounded-2xl card">
+        <strong class="text-cyan-400">Data Analysis</strong>
+        <p class="mt-2 text-zinc-300">Data cleaning, preprocessing, EDA, KPI definition</p>
+      </div>
+
+      <div class="bg-zinc-800 p-6 rounded-2xl card">
+        <strong class="text-cyan-400">SQL</strong>
+        <p class="mt-2 text-zinc-300">Joins, subqueries, aggregations, window functions</p>
+      </div>
+
+      <div class="bg-zinc-800 p-6 rounded-2xl card">
+        <strong class="text-cyan-400">Python</strong>
+        <p class="mt-2 text-zinc-300">pandas, numpy, matplotlib</p>
+      </div>
+
+      <div class="bg-zinc-800 p-6 rounded-2xl card">
+        <strong class="text-cyan-400">Dashboards</strong>
+        <p class="mt-2 text-zinc-300">Power BI, Excel</p>
+      </div>
+
+      <div class="bg-zinc-800 p-6 rounded-2xl card">
+        <strong class="text-cyan-400">Databases & Tools</strong>
+        <p class="mt-2 text-zinc-300">PostgreSQL, MySQL, MongoDB, Snowflake</p>
+      </div>
+
+      <div class="bg-zinc-800 p-6 rounded-2xl card">
+        <strong class="text-cyan-400">Collaboration & Tracking</strong>
+        <p class="mt-2 text-zinc-300">Git/GitHub, JIRA, Confluence</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="py-20">
-<div class="max-w-5xl mx-auto px-6">
-<h2 class="text-4xl font-bold text-center text-blue-400 mb-12 fade">Technical Skills</h2>
+<!-- Projects -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-10 text-cyan-400">Projects</h2>
 
-<div class="space-y-8">
+    <div class="grid md:grid-cols-2 gap-8">
 
-<div class="fade">
-<h3 class="mb-2">Python (pandas, numpy, matplotlib)</h3>
-<div class="bg-slate-700 h-3 rounded-full">
-<div class="skill-bar bg-blue-500 h-3 rounded-full" data-width="90%"></div>
-</div>
-</div>
+      <div class="bg-zinc-800 p-6 rounded-2xl card">
+        <h3 class="text-xl font-semibold mb-3">Purchase Pattern Analysis</h3>
+        <p class="text-zinc-300">Customer purchase trend analysis using Python, SQL and Power BI dashboards.</p>
+      </div>
 
-<div class="fade">
-<h3 class="mb-2">SQL (Joins, Subqueries, Aggregations, Window Functions)</h3>
-<div class="bg-slate-700 h-3 rounded-full">
-<div class="skill-bar bg-blue-500 h-3 rounded-full" data-width="85%"></div>
-</div>
-</div>
+      <div class="bg-zinc-800 p-6 rounded-2xl card">
+        <h3 class="text-xl font-semibold mb-3">Movie Database Analysis</h3>
+        <p class="text-zinc-300">Advanced SQL-based business insights extraction from structured movie datasets.</p>
+      </div>
 
-<div class="fade">
-<h3 class="mb-2">Power BI & Excel Dashboards</h3>
-<div class="bg-slate-700 h-3 rounded-full">
-<div class="skill-bar bg-blue-500 h-3 rounded-full" data-width="80%"></div>
-</div>
-</div>
+      <div class="bg-zinc-800 p-6 rounded-2xl card">
+        <h3 class="text-xl font-semibold mb-3">System Log Analysis & Automation</h3>
+        <p class="text-zinc-300">Automated log processing and structured dataset generation using Python.</p>
+      </div>
 
-</div>
-</div>
+    </div>
+  </div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="py-20 bg-slate-900">
-<div class="max-w-7xl mx-auto px-6">
-<h2 class="text-4xl font-bold text-center text-blue-400 mb-16 fade">
-Data Analytics Projects
-</h2>
+<!-- Professional Experience -->
+<section class="bg-zinc-900 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-10 text-cyan-400">Professional Experience</h2>
 
-<div class="grid md:grid-cols-2 gap-10">
-
-<div class="bg-slate-800 p-8 rounded-xl shadow fade">
-<h3 class="text-xl font-bold mb-4">Purchase Pattern Analysis</h3>
-<ul class="list-disc ml-5 space-y-2 text-gray-300">
-<li>Analyzed customer transaction data for purchase trends</li>
-<li>Performed data cleaning & EDA using Python & SQL</li>
-<li>Built interactive Power BI dashboards with KPIs</li>
-</ul>
-</div>
-
-<div class="bg-slate-800 p-8 rounded-xl shadow fade">
-<h3 class="text-xl font-bold mb-4">Movie Database Analysis</h3>
-<ul class="list-disc ml-5 space-y-2 text-gray-300">
-<li>Advanced SQL queries using joins & window functions</li>
-<li>Revenue & popularity trend analysis</li>
-<li>Director productivity & genre insights</li>
-</ul>
-</div>
-
-<div class="bg-slate-800 p-8 rounded-xl shadow fade">
-<h3 class="text-xl font-bold mb-4">System Log Analysis & Automation</h3>
-<ul class="list-disc ml-5 space-y-2 text-gray-300">
-<li>Processed large device logs</li>
-<li>Automated validation scripts using Python</li>
-<li>Converted unstructured logs to structured datasets</li>
-</ul>
-</div>
-
-</div>
-</div>
+    <div class="bg-zinc-800 p-6 rounded-2xl card">
+      <h3 class="text-xl font-semibold">Firmware Engineer — Bits N Bytes Soft Pvt. Ltd.</h3>
+      <p class="text-cyan-400 mb-4">Jun 2024 – Present</p>
+      <p class="text-zinc-300">
+        Extracted and validated embedded operational data, automated testing using Python,
+        worked with CAN & UART streams, ensured structured cloud-ready datasets.
+      </p>
+    </div>
+  </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="py-20">
-<div class="max-w-6xl mx-auto px-6 fade">
-<h2 class="text-4xl font-bold text-center text-blue-400 mb-12">
-Professional Experience
-</h2>
+<!-- Education -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-10 text-cyan-400">Education</h2>
 
-<div class="bg-slate-800 p-8 rounded-xl shadow">
-<h3 class="text-2xl font-semibold">
-Firmware Engineer — Bits N Bytes Soft Pvt. Ltd.
-</h3>
-<p class="mt-2 text-gray-400">Jun 2024 – Present</p>
-
-<ul class="mt-6 list-disc ml-6 space-y-2 text-gray-300">
-<li>Extracted and analyzed embedded operational data</li>
-<li>Worked with CAN & UART communication streams</li>
-<li>Automated data validation using Python</li>
-<li>Ensured structured cloud-ready datasets</li>
-<li>Collaborated using JIRA & Confluence</li>
-</ul>
-</div>
-</div>
+    <div class="bg-zinc-800 p-6 rounded-2xl card">
+      <h3 class="text-xl font-semibold">B.E. Electrical & Electronics Engineering</h3>
+      <p class="text-zinc-300">KLS GIT, Belagavi (2020 – 2023)</p>
+      <p class="text-cyan-400">CGPA: 8.01</p>
+    </div>
+  </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education" class="py-20 bg-slate-900">
-<div class="max-w-4xl mx-auto px-6 text-center fade">
-<h2 class="text-4xl font-bold text-blue-400 mb-8">Education</h2>
-<p class="text-xl font-semibold">
-B.E. Electrical & Electronics Engineering
-</p>
-<p class="text-gray-300 mt-2">
-KLS GIT, Belagavi (2020 – 2023)
-</p>
-<p class="mt-4 text-blue-400 font-semibold">CGPA: 8.01</p>
-</div>
+<!-- Strengths -->
+<section class="bg-zinc-900 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-10 text-cyan-400">Strengths</h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div class="bg-zinc-800 p-6 rounded-2xl card">Analytical Thinking</div>
+      <div class="bg-zinc-800 p-6 rounded-2xl card">Data Interpretation</div>
+      <div class="bg-zinc-800 p-6 rounded-2xl card">Problem Solving</div>
+      <div class="bg-zinc-800 p-6 rounded-2xl card">Quick Learner</div>
+    </div>
+  </div>
 </section>
 
-<footer class="py-12 text-center bg-slate-900 border-t border-slate-700">
-<p>📧 upadhyedharanendra9@gmail.com</p>
-<p>📞 +91 8762031009</p>
-<p class="mt-4 text-gray-400">© 2026 Dharanendra Upadhye</p>
+<!-- Footer -->
+<footer class="bg-black py-12 text-center text-zinc-500">
+  <p>Open to Data Analyst fresher opportunities</p>
+  <p class="mt-2">upadhyedharanendra9@gmail.com | +91 8762031009</p>
 </footer>
-
-<script>
-function toggleDark(){
-document.documentElement.classList.toggle('dark');
-}
-
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-});
-document.querySelectorAll('.fade').forEach(el=>observer.observe(el));
-
-const skillObserver = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.style.width = entry.target.getAttribute('data-width');
-}
-});
-});
-document.querySelectorAll('.skill-bar').forEach(bar=>skillObserver.observe(bar));
-</script>
 
 </body>
 </html>
