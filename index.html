@@ -1,168 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dharanendra Upadhye | Data Analyst Portfolio 2026</title>
+  <title>Dharanendra Upadhye | Data Analyst Portfolio</title>
+
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { darkMode: 'class' }
+  </script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
   <style>
-    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0e17; color: #e2e8f0; }
-    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); }
-    .card { transition: all 0.4s ease; }
-    .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
-    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .fade-in { opacity: 0; transform: translateY(40px); transition: 0.8s ease; }
     .fade-in.visible { opacity: 1; transform: translateY(0); }
+    .skill-bar { width: 0; transition: width 2s ease; }
   </style>
 </head>
 
-<body class="min-h-screen">
+<body class="bg-white text-gray-900 dark:bg-gray-950 dark:text-gray-100 transition duration-500">
 
 <!-- NAVBAR -->
-<nav class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-800">
-  <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
-    <div class="text-2xl font-bold text-blue-400">Dharanendra Upadhye</div>
-    <div class="flex gap-6">
-      <a href="#about" class="hover:text-blue-400">About</a>
-      <a href="#skills" class="hover:text-blue-400">Skills</a>
-      <a href="#projects" class="hover:text-blue-400">Projects</a>
-      <a href="#experience" class="hover:text-blue-400">Experience</a>
-      <a href="Dharanendra_Data_Analyst.pdf" download class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-md">Download CV</a>
+<nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-800">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="text-xl font-bold text-blue-600">Dharanendra Upadhye</div>
+    <div class="flex items-center gap-6">
+      <a href="#projects" class="hover:text-blue-600">Projects</a>
+      <a href="#skills" class="hover:text-blue-600">Skills</a>
+      <a href="Dharanendra_Data_Analyst.pdf" download class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Download CV</a>
+      <button onclick="toggleDark()" class="text-xl">
+        <i class="fas fa-moon"></i>
+      </button>
     </div>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero min-h-screen flex items-center pt-20">
-  <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-    <div class="fade-in">
-      <h1 class="text-5xl md:text-6xl font-bold">Hi, I'm Dharanendra</h1>
-      <p class="text-3xl mt-4 text-blue-300">Data Analyst | Python | SQL | Power BI</p>
-      <p class="mt-6 text-lg max-w-lg">
-        Data Analyst fresher with strong technical background in Firmware Engineering.
-        Specialized in data extraction, log analytics, KPI dashboards, and automation.
-        Passionate about turning raw data into meaningful business insights.
-      </p>
-      <div class="mt-8 flex gap-4">
-        <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold">View Projects</a>
-        <a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306" target="_blank" class="border border-gray-600 hover:border-blue-400 px-8 py-4 rounded-lg">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-        <a href="https://github.com/" target="_blank" class="border border-gray-600 hover:border-blue-400 px-8 py-4 rounded-lg">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </div>
-    </div>
-
-    <div class="fade-in flex justify-center">
-      <img src="profile.jpeg" class="w-80 h-80 rounded-full border-8 border-blue-500/30 shadow-2xl">
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-20">
-  <div class="max-w-5xl mx-auto px-6 text-center fade-in">
-    <h2 class="text-4xl font-bold mb-6">About Me</h2>
-    <p class="text-lg text-gray-400 leading-relaxed">
-      I am a B.E. Electrical & Electronics Engineering graduate (CGPA: 8.01)
-      currently working as a Firmware Engineer at Bits N Bytes Soft Pvt. Ltd.
-      I transitioned into Data Analytics by applying Python and SQL to extract,
-      clean, and analyze embedded device data.
-      I specialize in log analysis, KPI tracking, dashboard building, and automation.
+<section class="min-h-screen flex items-center justify-center text-center px-6">
+  <div class="fade-in">
+    <h1 class="text-5xl md:text-6xl font-bold">Hi, I'm Dharanendra</h1>
+    <p class="mt-6 text-2xl text-blue-600">Data Analyst | Python | SQL | Power BI</p>
+    <p class="mt-6 max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+      Firmware Engineer turned Data Analyst. Specialized in log analytics, automation,
+      SQL analysis, and KPI dashboards that enable data-driven decisions.
     </p>
+    <div class="mt-8 flex justify-center gap-4">
+      <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">View Projects</a>
+      <a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306" target="_blank"
+         class="border px-6 py-3 rounded-lg hover:border-blue-600">LinkedIn</a>
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" class="py-20 bg-gray-900">
+<section id="skills" class="py-20 bg-gray-100 dark:bg-gray-900">
+  <div class="max-w-4xl mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-12 fade-in">Technical Expertise</h2>
+
+    <div class="mb-8 fade-in">
+      <div class="flex justify-between mb-2">
+        <span>Python (pandas, numpy, matplotlib)</span>
+        <span>90%</span>
+      </div>
+      <div class="w-full bg-gray-300 dark:bg-gray-700 h-3 rounded-full">
+        <div class="skill-bar bg-blue-600 h-3 rounded-full" data-width="90%"></div>
+      </div>
+    </div>
+
+    <div class="mb-8 fade-in">
+      <div class="flex justify-between mb-2">
+        <span>SQL (Joins, Window Functions)</span>
+        <span>85%</span>
+      </div>
+      <div class="w-full bg-gray-300 dark:bg-gray-700 h-3 rounded-full">
+        <div class="skill-bar bg-green-500 h-3 rounded-full" data-width="85%"></div>
+      </div>
+    </div>
+
+    <div class="mb-8 fade-in">
+      <div class="flex justify-between mb-2">
+        <span>Power BI & Excel Dashboards</span>
+        <span>80%</span>
+      </div>
+      <div class="w-full bg-gray-300 dark:bg-gray-700 h-3 rounded-full">
+        <div class="skill-bar bg-purple-600 h-3 rounded-full" data-width="80%"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="py-20">
   <div class="max-w-6xl mx-auto px-6">
-    <h2 class="text-4xl font-bold text-center mb-16 fade-in">Technical Skills</h2>
+    <h2 class="text-4xl font-bold text-center mb-16 fade-in">Featured Projects</h2>
 
-    <div class="grid md:grid-cols-3 gap-8 text-center">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-      <div class="card bg-gray-800 p-8 rounded-xl fade-in">
-        <h3 class="text-xl font-semibold mb-4 text-blue-400">Data Analysis</h3>
-        <p>Data Cleaning, EDA, KPI Definition, Data Interpretation</p>
+      <!-- 1 (Kept Same) -->
+      <div class="bg-gray-800 rounded-xl p-6 fade-in">
+        <h3 class="text-2xl font-bold text-blue-400">Purchase Pattern Analysis</h3>
+        <p class="text-gray-400 mt-3">
+          Analyzed customer transactions to identify trends and high-value segments.
+          Built interactive Power BI dashboards for KPIs (AOV, repeat rate).
+        </p>
+        <p class="mt-4 text-sm text-blue-300">Impact: 20-25% marketing optimization potential</p>
       </div>
 
-      <div class="card bg-gray-800 p-8 rounded-xl fade-in">
-        <h3 class="text-xl font-semibold mb-4 text-blue-400">Programming</h3>
-        <p>Python (pandas, numpy, matplotlib), SQL (Joins, Window Functions)</p>
+      <!-- 2 -->
+      <div class="bg-gray-800 rounded-xl p-6 fade-in">
+        <h3 class="text-2xl font-bold text-purple-400">Movie Revenue SQL Analysis</h3>
+        <p class="text-gray-400 mt-3">
+          Used advanced SQL queries to analyze revenue contribution,
+          genre trends, and director productivity.
+        </p>
+        <p class="mt-4 text-sm text-purple-300">Impact: Business-ready content insights</p>
       </div>
 
-      <div class="card bg-gray-800 p-8 rounded-xl fade-in">
-        <h3 class="text-xl font-semibold mb-4 text-blue-400">Visualization</h3>
-        <p>Power BI, Excel Dashboards</p>
+      <!-- 3 -->
+      <div class="bg-gray-800 rounded-xl p-6 fade-in">
+        <h3 class="text-2xl font-bold text-green-400">System Log Automation</h3>
+        <p class="text-gray-400 mt-3">
+          Automated parsing of unstructured device logs using Python,
+          reducing manual debugging effort by 60–70%.
+        </p>
+        <p class="mt-4 text-sm text-green-300">Impact: Faster root-cause detection</p>
       </div>
 
-      <div class="card bg-gray-800 p-8 rounded-xl fade-in">
-        <h3 class="text-xl font-semibold mb-4 text-blue-400">Databases</h3>
-        <p>PostgreSQL, MySQL, MongoDB, Snowflake</p>
+      <!-- 4 -->
+      <div class="bg-gray-800 rounded-xl p-6 fade-in">
+        <h3 class="text-2xl font-bold text-orange-400">CAN Data Validation</h3>
+        <p class="text-gray-400 mt-3">
+          Validated multi-node CAN communication packets
+          ensuring data integrity and synchronization.
+        </p>
+        <p class="mt-4 text-sm text-orange-300">Impact: 100% packet validation accuracy</p>
       </div>
 
-      <div class="card bg-gray-800 p-8 rounded-xl fade-in">
-        <h3 class="text-xl font-semibold mb-4 text-blue-400">Tools</h3>
-        <p>Git, GitHub, JIRA, Confluence</p>
+      <!-- 5 -->
+      <div class="bg-gray-800 rounded-xl p-6 fade-in">
+        <h3 class="text-2xl font-bold text-red-400">Sensor Data Automation</h3>
+        <p class="text-gray-400 mt-3">
+          Structured accelerometer & tilt sensor data for analysis,
+          improving hardware validation workflow.
+        </p>
+        <p class="mt-4 text-sm text-red-300">Impact: Streamlined performance evaluation</p>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- PROJECTS (Your existing cards remain same) -->
-<!-- Keep your previous project section here (no change needed) -->
-
-<!-- EXPERIENCE -->
-<section id="experience" class="py-20">
-  <div class="max-w-5xl mx-auto px-6 fade-in">
-    <h2 class="text-4xl font-bold text-center mb-12">Professional Experience</h2>
-
-    <div class="bg-gray-800 p-8 rounded-xl">
-      <h3 class="text-2xl font-semibold">Firmware Engineer — Bits N Bytes Soft Pvt. Ltd.</h3>
-      <p class="text-gray-400 mt-2">Jun 2024 – Present</p>
-      <ul class="mt-6 space-y-3 text-gray-300">
-        <li>• Extracted and analyzed operational data from embedded systems</li>
-        <li>• Automated data validation using Python scripts</li>
-        <li>• Worked with CAN & UART communication streams</li>
-        <li>• Ensured structured cloud-ready datasets</li>
-        <li>• Used JIRA & Confluence for project tracking</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="py-20 bg-gray-900">
-  <div class="max-w-5xl mx-auto px-6 text-center fade-in">
-    <h2 class="text-4xl font-bold mb-8">Education</h2>
-    <p class="text-xl">B.E. Electrical & Electronics Engineering</p>
-    <p class="text-gray-400">KLS GIT, Belagavi (2020 – 2023)</p>
-    <p class="text-blue-400 mt-2">CGPA: 8.01</p>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="py-20 text-center fade-in">
-  <h2 class="text-4xl font-bold mb-8">Let's Connect</h2>
-  <p class="text-lg text-gray-400">Open to Data Analyst roles in Bangalore, Chennai, Hyderabad</p>
-  <div class="mt-6 space-y-2">
-    <p><i class="fa fa-envelope"></i> upadhyedharanendra9@gmail.com</p>
-    <p><i class="fa fa-phone"></i> +91 8762031009</p>
-  </div>
-</section>
-
-<footer class="bg-gray-900 py-6 text-center text-gray-500">
-  © 2026 Dharanendra Upadhye
+<!-- FOOTER -->
+<footer class="py-12 text-center bg-gray-100 dark:bg-gray-900">
+  <p>Open to Data Analyst roles in Bangalore, Chennai, Hyderabad</p>
+  <p class="mt-2 text-gray-600 dark:text-gray-400">
+    upadhyedharanendra9@gmail.com | +91 8762031009
+  </p>
+  <p class="mt-4 text-sm text-gray-500">© 2026 Dharanendra Upadhye</p>
 </footer>
 
 <script>
+function toggleDark() {
+  document.documentElement.classList.toggle('dark');
+}
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) entry.target.classList.add('visible');
   });
 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+const skillObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.width = entry.target.getAttribute('data-width');
+    }
+  });
+});
+document.querySelectorAll('.skill-bar').forEach(bar => skillObserver.observe(bar));
 </script>
 
 </body>
