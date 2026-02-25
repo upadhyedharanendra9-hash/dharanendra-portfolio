@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,170 +7,162 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
-    body { font-family: 'Inter', system-ui, sans-serif; }
-    .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); }
-    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
+    body { font-family: 'Segoe UI', system-ui, sans-serif; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
+    .section { transition: all 0.6s ease; }
+    .card { transition: all 0.4s ease; }
+    .card:hover { transform: translateY(-8px); }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
   <!-- Navbar -->
-  <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-md z-50 border-b border-zinc-800">
+  <nav class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-md z-50 border-b border-zinc-800">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div class="text-2xl font-bold text-cyan-400">DU</div>
-      <div class="hidden md:flex space-x-8 text-sm">
-        <a href="#about" class="hover:text-cyan-400 transition">About</a>
-        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
-        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
-        <a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
-      </div>
-      <a href="Dharanendra_Data_Analyst.pdf" download class="bg-cyan-500 hover:bg-cyan-600 px-6 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2">
+      <div class="text-2xl font-bold text-cyan-400">Dharanendra Upadhye</div>
+      <a href="Dharanendra_Data_Analyst.pdf" download class="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-full font-semibold flex items-center gap-2">
         <i class="fas fa-download"></i> Download CV
       </a>
     </div>
   </nav>
 
   <!-- Hero -->
-  <section class="hero-bg min-h-screen flex items-center pt-20">
+  <section class="hero min-h-screen flex items-center pt-20">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
       <div>
-        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          Hi, I'm <span class="text-cyan-400">Dharanendra</span>
-        </h1>
-        <p class="mt-4 text-2xl text-zinc-400">Data Analyst Fresher • Python • SQL • Power BI</p>
-        <p class="mt-6 text-lg text-zinc-400 max-w-lg">
-          Turning raw logs & data into business insights. Firmware Engineer turned Data Analyst — expert in automation, log analysis & interactive dashboards.
-        </p>
-        <div class="mt-10 flex gap-4">
-          <a href="#projects" class="bg-white text-black px-8 py-4 rounded-full font-semibold flex items-center gap-3 hover:scale-105 transition">
-            View Projects <i class="fas fa-arrow-right"></i>
-          </a>
-          <a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306" target="_blank" class="border border-zinc-700 hover:border-cyan-400 px-8 py-4 rounded-full font-semibold transition">
-            LinkedIn
-          </a>
+        <h1 class="text-6xl font-bold">DHARANENDRA UPADHYE</h1>
+        <p class="text-3xl mt-3 text-cyan-400">Data Analyst Fresher — Python — SQL — Power BI</p>
+        <div class="mt-8 flex gap-6 text-xl">
+          <a href="mailto:upadhyedharanendra9@gmail.com" class="hover:text-cyan-400">upadhyedharanendra9@gmail.com</a>
+          <a href="tel:+918762031009" class="hover:text-cyan-400">+91 8762031009</a>
+          <a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306" target="_blank" class="hover:text-cyan-400">LinkedIn</a>
         </div>
       </div>
       <div class="flex justify-center">
-        <img src="profile.jpeg" alt="Dharanendra Upadhye" class="w-80 h-80 object-cover rounded-3xl border-8 border-cyan-400/30 shadow-2xl">
+        <img src="profile.jpeg" alt="Dharanendra Upadhye" class="w-80 h-80 rounded-3xl border-8 border-cyan-400/30 shadow-2xl">
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="py-20 bg-zinc-900">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-8">About Me</h2>
-      <p class="text-lg text-zinc-400 leading-relaxed">
-        Entry-level Data Analyst transitioning from Firmware Engineering (Bits N Bytes Soft). 
-        Hands-on experience in data extraction, system log analysis, Python automation & validation. 
-        Passionate about building interactive Power BI dashboards and delivering actionable insights.
-      </p>
-    </div>
+  <!-- Profile -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-bold mb-8">Profile</h2>
+    <p class="text-lg leading-relaxed">
+      Entry-level Data Analyst with hands-on experience in Python, SQL, Excel, and Power BI. Transitioning from a Firmware Engineering background with experience in data extraction, log analysis, automation, and validation. Seeking a Data Analyst fresher role to apply analytical skills, build dashboards, and support data-driven business decisions.
+    </p>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-20">
+  <!-- Technical Skills -->
+  <section class="bg-zinc-900 py-16">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Technical Skills</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
-          <i class="fas fa-database text-4xl text-cyan-400 mb-4"></i>
-          <h3 class="font-semibold">SQL</h3>
-          <p class="text-sm text-zinc-400">Joins, Window Functions, CTEs</p>
-        </div>
-        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
-          <i class="fab fa-python text-4xl text-cyan-400 mb-4"></i>
-          <h3 class="font-semibold">Python</h3>
-          <p class="text-sm text-zinc-400">pandas, numpy, matplotlib, Automation</p>
-        </div>
-        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
-          <i class="fas fa-chart-pie text-4xl text-cyan-400 mb-4"></i>
-          <h3 class="font-semibold">Power BI</h3>
-          <p class="text-sm text-zinc-400">Interactive Dashboards & KPIs</p>
-        </div>
-        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
-          <i class="fas fa-file-excel text-4xl text-cyan-400 mb-4"></i>
-          <h3 class="font-semibold">Excel</h3>
-          <p class="text-sm text-zinc-400">Pivots & Advanced Analysis</p>
-        </div>
-        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
-          <i class="fas fa-server text-4xl text-cyan-400 mb-4"></i>
-          <h3 class="font-semibold">Databases</h3>
-          <p class="text-sm text-zinc-400">PostgreSQL, MySQL, MongoDB, Snowflake</p>
-        </div>
+      <h2 class="text-4xl font-bold mb-10">Technical Skills</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div><strong>Data Analysis:</strong> Data cleaning, preprocessing, EDA, KPI definition</div>
+        <div><strong>SQL:</strong> Joins, subqueries, aggregations, window functions</div>
+        <div><strong>Python:</strong> pandas, numpy, matplotlib</div>
+        <div><strong>Dashboards:</strong> Power BI, Excel</div>
+        <div><strong>Databases & Tools:</strong> PostgreSQL, MySQL, MongoDB, Snowflake</div>
+        <div><strong>Collaboration & Tracking Tools:</strong> Git/GitHub, JIRA, Confluence</div>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects" class="py-20 bg-zinc-900">
+  <!-- Data Analytics Projects -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-bold mb-10">Data Analytics Projects</h2>
+    
+    <div class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4">Purchase Pattern Analysis (Python, SQL, Power BI)</h3>
+      <ul class="list-disc pl-6 space-y-2 text-zinc-300">
+        <li>Analyzed customer transaction data to identify purchase patterns, sales trends, and high-value customers</li>
+        <li>Used SQL and Python for data extraction, cleaning, and exploratory analysis</li>
+        <li>Built interactive Power BI dashboards to visualize KPIs and support business insights</li>
+      </ul>
+    </div>
+
+    <div class="mb-12">
+      <h3 class="text-2xl font-semibold mb-4">Movie Database Analysis (SQL)</h3>
+      <ul class="list-disc pl-6 space-y-2 text-zinc-300">
+        <li>Performed in-depth SQL analysis on structured movie datasets to extract business insights</li>
+        <li>Wrote optimized SQL queries using joins, aggregations, subqueries, and window functions</li>
+        <li>Analyzed movie popularity, revenue contribution, director productivity, and performance trends</li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-2xl font-semibold mb-4">System Log Analysis & Automation (Python)</h3>
+      <ul class="list-disc pl-6 space-y-2 text-zinc-300">
+        <li>Analyzed large volumes of device and system logs to identify failure patterns and performance trends</li>
+        <li>Automated data extraction and validation using Python scripts to reduce manual analysis effort</li>
+        <li>Converted unstructured log data into structured datasets for reporting and analysis</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Technical Projects -->
+  <section class="bg-zinc-900 py-16">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-        <!-- Project 1 -->
-        <div class="glass border border-zinc-700 rounded-3xl overflow-hidden hover:-translate-y-2 transition">
-          <img src="images/purchase-dashboard.png" alt="Purchase Pattern" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Purchase Pattern Analysis</h3>
-            <p class="text-zinc-400 text-sm mt-2">Customer transaction analysis • Sales trends • High-value segments</p>
-            <div class="mt-4 flex gap-2 flex-wrap">
-              <span class="text-xs bg-cyan-900 text-cyan-300 px-3 py-1 rounded-full">Python</span>
-              <span class="text-xs bg-cyan-900 text-cyan-300 px-3 py-1 rounded-full">SQL</span>
-              <span class="text-xs bg-cyan-900 text-cyan-300 px-3 py-1 rounded-full">Power BI</span>
-            </div>
-            <a href="purchase-pattern-analysis/" target="_blank" class="mt-6 block text-center bg-cyan-500 hover:bg-cyan-600 py-3 rounded-2xl font-semibold">View Project & Code →</a>
-          </div>
-        </div>
-
-        <!-- Add similar cards for other 4 projects (copy-paste & change text/image) -->
-        <!-- Example for Movie -->
-        <div class="glass border border-zinc-700 rounded-3xl overflow-hidden hover:-translate-y-2 transition">
-          <img src="images/movie-analysis.png" alt="Movie Analysis" class="w-full h-48 object-cover">
-          <div class="p-6">
-            <h3 class="text-xl font-semibold">Movie Database Analysis</h3>
-            <p class="text-zinc-400 text-sm mt-2">Revenue, director productivity & genre trends using advanced SQL</p>
-            <a href="movie-database-analysis/" target="_blank" class="mt-6 block text-center border border-zinc-600 hover:border-cyan-400 py-3 rounded-2xl font-semibold">View Project →</a>
-          </div>
-        </div>
-
-        <!-- Repeat for System Log, CAN, Sensor (use your folder names) -->
-
+      <h2 class="text-4xl font-bold mb-10">Technical Projects</h2>
+      
+      <div class="mb-12">
+        <h3 class="text-2xl font-semibold mb-4">CAN Data Communication & Validation</h3>
+        <ul class="list-disc pl-6 space-y-2 text-zinc-300">
+          <li>Designed and validated structured data packets for multi-node communication systems</li>
+          <li>Compared on-device data logs with transmitted datasets to ensure consistency and accuracy</li>
+          <li>Analyzed communication metrics to detect data loss and anomalies</li>
+        </ul>
       </div>
-    </div>
-  </section>
 
-  <!-- Experience -->
-  <section id="experience" class="py-20">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12">Experience</h2>
-      <div class="glass border border-zinc-700 p-8 rounded-3xl">
-        <h3 class="font-semibold text-xl">Firmware Engineer — Bits N Bytes Soft Pvt. Ltd.</h3>
-        <p class="text-cyan-400 text-sm">Jun 2024 – Present</p>
-        <ul class="mt-6 space-y-4 text-zinc-400">
-          <li class="flex gap-3"><i class="fas fa-check text-cyan-400 mt-1"></i> Automated data validation from embedded devices using Python</li>
-          <li class="flex gap-3"><i class="fas fa-check text-cyan-400 mt-1"></i> Analyzed CAN/UART logs & reduced manual effort</li>
-          <li class="flex gap-3"><i class="fas fa-check text-cyan-400 mt-1"></i> Ensured 100% data integrity before cloud transmission</li>
+      <div>
+        <h3 class="text-2xl font-semibold mb-4">Sensor Data Analysis & Testing Automation</h3>
+        <ul class="list-disc pl-6 space-y-2 text-zinc-300">
+          <li>Analyzed accelerometer and tilt-angle sensor data under different operational scenarios</li>
+          <li>Automated test data capture and comparison using Python scripts</li>
+          <li>Structured raw sensor outputs into datasets suitable for further analysis</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Footer / Contact -->
-  <footer class="bg-black py-12 border-t border-zinc-800">
-    <div class="max-w-7xl mx-auto px-6 text-center">
-      <p class="text-2xl font-bold text-cyan-400">Let's Connect</p>
-      <p class="mt-3 text-zinc-400">upadhyedharanendra9@gmail.com | +91 8762031009</p>
-      <div class="flex justify-center gap-8 mt-8 text-3xl">
-        <a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306" target="_blank"><i class="fab fa-linkedin hover:text-cyan-400 transition"></i></a>
-        <a href="https://github.com/upadhyedharanendra9-hash" target="_blank"><i class="fab fa-github hover:text-cyan-400 transition"></i></a>
-      </div>
-      <p class="mt-12 text-xs text-zinc-500">© 2026 Dharanendra Upadhye • Built for recruiters</p>
+  <!-- Professional Experience -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-4xl font-bold mb-10">Professional Experience</h2>
+    <div class="bg-zinc-900 p-8 rounded-2xl">
+      <h3 class="text-2xl font-semibold">Firmware Engineer (Technical Background) — Bits N Bytes Soft Pvt. Ltd.</h3>
+      <p class="text-cyan-400">Jun 2024 – Present</p>
+      <ul class="list-disc pl-6 mt-6 space-y-3 text-zinc-300">
+        <li>Extracted and analyzed operational data from embedded devices to validate system performance</li>
+        <li>Worked with CAN and UART data streams, identifying anomalies across multiple test scenarios</li>
+        <li>Used Python-based tools to automate data validation, testing, and result reporting</li>
+        <li>Ensured data integrity before transmitting structured data to cloud systems</li>
+        <li>Collaborated with cross-functional teams using JIRA and Confluence to track tasks and document work</li>
+      </ul>
     </div>
+  </section>
+
+  <!-- Education & Strengths -->
+  <section class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12">
+    <div>
+      <h2 class="text-4xl font-bold mb-6">Education</h2>
+      <p class="text-2xl">B.E. Electrical & Electronics Engineering (CGPA: 8.01)</p>
+      <p class="text-zinc-400">KLS GIT, Belagavi | 2020 – 2023</p>
+    </div>
+    <div>
+      <h2 class="text-4xl font-bold mb-6">Strengths</h2>
+      <ul class="list-disc pl-6 space-y-3 text-zinc-300">
+        <li>Analytical Thinking</li>
+        <li>Data Interpretation</li>
+        <li>Problem Solving</li>
+        <li>Quick Learner</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black py-12 text-center text-zinc-500">
+    <p>Open to Data Analyst fresher opportunities</p>
+    <p class="mt-2">upadhyedharanendra9@gmail.com | +91 8762031009</p>
   </footer>
 
-  <script>
-    // Mobile menu (add later if needed) + smooth scroll already handled by Tailwind
-  </script>
 </body>
 </html>
