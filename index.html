@@ -1,84 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dharanendra Upadhye | Data Analyst Fresher 2026</title>
+  <title>Dharanendra Upadhye | Data Analyst Fresher</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     body { font-family: 'Inter', system-ui, sans-serif; }
-    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%); }
-    .card { transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
-    .card:hover { transform: translateY(-15px) scale(1.03); box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.5); }
-    .fade-in { opacity: 0; transform: translateY(40px); transition: all 1s ease-out; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .pulse { animation: pulse 4s infinite ease-in-out; }
-    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.08); } }
+    .glass { background: rgba(255,255,255,0.05); backdrop-filter: blur(12px); }
+    .hero-bg { background: linear-gradient(135deg, #0f172a 0%, #1e2937 100%); }
   </style>
 </head>
 <body class="bg-zinc-950 text-white">
 
-  <!-- NAV -->
-  <nav class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-md z-50 border-b border-zinc-800">
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-zinc-950/80 backdrop-blur-md z-50 border-b border-zinc-800">
     <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-      <div class="text-3xl font-bold text-cyan-400">DU</div>
-      <a href="Dharanendra_Data_Analyst.pdf" download class="bg-cyan-500 hover:bg-cyan-600 px-8 py-3 rounded-full font-semibold flex items-center gap-3">
+      <div class="text-2xl font-bold text-cyan-400">DU</div>
+      <div class="hidden md:flex space-x-8 text-sm">
+        <a href="#about" class="hover:text-cyan-400 transition">About</a>
+        <a href="#skills" class="hover:text-cyan-400 transition">Skills</a>
+        <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+        <a href="#experience" class="hover:text-cyan-400 transition">Experience</a>
+      </div>
+      <a href="Dharanendra_Data_Analyst.pdf" download class="bg-cyan-500 hover:bg-cyan-600 px-6 py-2.5 rounded-full text-sm font-semibold flex items-center gap-2">
         <i class="fas fa-download"></i> Download CV
       </a>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section class="hero min-h-screen flex items-center pt-20">
+  <!-- Hero -->
+  <section class="hero-bg min-h-screen flex items-center pt-20">
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-      <div class="fade-in">
-        <h1 class="text-6xl md:text-7xl font-bold leading-none">Hi, I'm <span class="text-cyan-400">Dharanendra</span></h1>
-        <p class="mt-4 text-3xl text-zinc-400">Data Analyst Fresher | Python • SQL • Power BI</p>
-        <p class="mt-8 text-lg max-w-md">Firmware Engineer turned Data Analyst. Turning raw logs & device data into powerful business insights with automation & interactive dashboards.</p>
-        <a href="#projects" class="mt-10 inline-block bg-white text-black px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition">View My Projects →</a>
+      <div>
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+          Hi, I'm <span class="text-cyan-400">Dharanendra</span>
+        </h1>
+        <p class="mt-4 text-2xl text-zinc-400">Data Analyst Fresher • Python • SQL • Power BI</p>
+        <p class="mt-6 text-lg text-zinc-400 max-w-lg">
+          Turning raw logs & data into business insights. Firmware Engineer turned Data Analyst — expert in automation, log analysis & interactive dashboards.
+        </p>
+        <div class="mt-10 flex gap-4">
+          <a href="#projects" class="bg-white text-black px-8 py-4 rounded-full font-semibold flex items-center gap-3 hover:scale-105 transition">
+            View Projects <i class="fas fa-arrow-right"></i>
+          </a>
+          <a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306" target="_blank" class="border border-zinc-700 hover:border-cyan-400 px-8 py-4 rounded-full font-semibold transition">
+            LinkedIn
+          </a>
+        </div>
       </div>
-      <div class="flex justify-center fade-in">
-        <img src="profile.jpeg" class="w-96 h-96 object-cover rounded-3xl border-8 border-cyan-400/30 shadow-2xl pulse" alt="Dharanendra">
+      <div class="flex justify-center">
+        <img src="profile.jpeg" alt="Dharanendra Upadhye" class="w-80 h-80 object-cover rounded-3xl border-8 border-cyan-400/30 shadow-2xl">
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="py-24 bg-zinc-900">
+  <!-- About -->
+  <section id="about" class="py-20 bg-zinc-900">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">About Me</h2>
+      <p class="text-lg text-zinc-400 leading-relaxed">
+        Entry-level Data Analyst transitioning from Firmware Engineering (Bits N Bytes Soft). 
+        Hands-on experience in data extraction, system log analysis, Python automation & validation. 
+        Passionate about building interactive Power BI dashboards and delivering actionable insights.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="py-20">
     <div class="max-w-7xl mx-auto px-6">
-      <h2 class="text-5xl font-bold text-center mb-16">Featured Projects</h2>
+      <h2 class="text-4xl font-bold text-center mb-12">Technical Skills</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
+          <i class="fas fa-database text-4xl text-cyan-400 mb-4"></i>
+          <h3 class="font-semibold">SQL</h3>
+          <p class="text-sm text-zinc-400">Joins, Window Functions, CTEs</p>
+        </div>
+        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
+          <i class="fab fa-python text-4xl text-cyan-400 mb-4"></i>
+          <h3 class="font-semibold">Python</h3>
+          <p class="text-sm text-zinc-400">pandas, numpy, matplotlib, Automation</p>
+        </div>
+        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
+          <i class="fas fa-chart-pie text-4xl text-cyan-400 mb-4"></i>
+          <h3 class="font-semibold">Power BI</h3>
+          <p class="text-sm text-zinc-400">Interactive Dashboards & KPIs</p>
+        </div>
+        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
+          <i class="fas fa-file-excel text-4xl text-cyan-400 mb-4"></i>
+          <h3 class="font-semibold">Excel</h3>
+          <p class="text-sm text-zinc-400">Pivots & Advanced Analysis</p>
+        </div>
+        <div class="glass border border-zinc-700 p-6 rounded-2xl text-center hover:border-cyan-400 transition">
+          <i class="fas fa-server text-4xl text-cyan-400 mb-4"></i>
+          <h3 class="font-semibold">Databases</h3>
+          <p class="text-sm text-zinc-400">PostgreSQL, MySQL, MongoDB, Snowflake</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Featured Projects</h2>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
         <!-- Project 1 -->
-        <div class="card glass border border-zinc-700 rounded-3xl overflow-hidden fade-in">
-          <div class="h-52 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-6xl">📊</div>
-          <div class="p-8">
-            <h3 class="text-2xl font-bold">Purchase Pattern Analysis</h3>
-            <p class="text-zinc-400 mt-3">Identified high-value customers & sales trends → 22% revenue opportunity</p>
-            <div class="flex gap-2 mt-6">
-              <span class="text-xs bg-cyan-900 px-4 py-2 rounded-full">Python</span>
-              <span class="text-xs bg-cyan-900 px-4 py-2 rounded-full">SQL</span>
-              <span class="text-xs bg-cyan-900 px-4 py-2 rounded-full">Power BI</span>
+        <div class="glass border border-zinc-700 rounded-3xl overflow-hidden hover:-translate-y-2 transition">
+          <img src="images/purchase-dashboard.png" alt="Purchase Pattern" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Purchase Pattern Analysis</h3>
+            <p class="text-zinc-400 text-sm mt-2">Customer transaction analysis • Sales trends • High-value segments</p>
+            <div class="mt-4 flex gap-2 flex-wrap">
+              <span class="text-xs bg-cyan-900 text-cyan-300 px-3 py-1 rounded-full">Python</span>
+              <span class="text-xs bg-cyan-900 text-cyan-300 px-3 py-1 rounded-full">SQL</span>
+              <span class="text-xs bg-cyan-900 text-cyan-300 px-3 py-1 rounded-full">Power BI</span>
             </div>
-            <a href="purchase-pattern-analysis/" class="mt-8 block text-center bg-cyan-500 hover:bg-cyan-600 py-4 rounded-2xl font-semibold">View Project & Live Dashboard →</a>
+            <a href="purchase-pattern-analysis/" target="_blank" class="mt-6 block text-center bg-cyan-500 hover:bg-cyan-600 py-3 rounded-2xl font-semibold">View Project & Code →</a>
           </div>
         </div>
 
-        <!-- Add 4 more cards below (copy-paste and change only title, description, folder link) -->
+        <!-- Add similar cards for other 4 projects (copy-paste & change text/image) -->
+        <!-- Example for Movie -->
+        <div class="glass border border-zinc-700 rounded-3xl overflow-hidden hover:-translate-y-2 transition">
+          <img src="images/movie-analysis.png" alt="Movie Analysis" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="text-xl font-semibold">Movie Database Analysis</h3>
+            <p class="text-zinc-400 text-sm mt-2">Revenue, director productivity & genre trends using advanced SQL</p>
+            <a href="movie-database-analysis/" target="_blank" class="mt-6 block text-center border border-zinc-600 hover:border-cyan-400 py-3 rounded-2xl font-semibold">View Project →</a>
+          </div>
+        </div>
+
+        <!-- Repeat for System Log, CAN, Sensor (use your folder names) -->
 
       </div>
     </div>
   </section>
 
-  <!-- SKILLS + EXPERIENCE + FOOTER (short) -->
-  <!-- (Full code is long — I kept only core above for space. Reply “send full html” if you want complete 400-line version with all 5 cards, skills grid, experience, contact, footer) -->
+  <!-- Experience -->
+  <section id="experience" class="py-20">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Experience</h2>
+      <div class="glass border border-zinc-700 p-8 rounded-3xl">
+        <h3 class="font-semibold text-xl">Firmware Engineer — Bits N Bytes Soft Pvt. Ltd.</h3>
+        <p class="text-cyan-400 text-sm">Jun 2024 – Present</p>
+        <ul class="mt-6 space-y-4 text-zinc-400">
+          <li class="flex gap-3"><i class="fas fa-check text-cyan-400 mt-1"></i> Automated data validation from embedded devices using Python</li>
+          <li class="flex gap-3"><i class="fas fa-check text-cyan-400 mt-1"></i> Analyzed CAN/UART logs & reduced manual effort</li>
+          <li class="flex gap-3"><i class="fas fa-check text-cyan-400 mt-1"></i> Ensured 100% data integrity before cloud transmission</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer / Contact -->
+  <footer class="bg-black py-12 border-t border-zinc-800">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <p class="text-2xl font-bold text-cyan-400">Let's Connect</p>
+      <p class="mt-3 text-zinc-400">upadhyedharanendra9@gmail.com | +91 8762031009</p>
+      <div class="flex justify-center gap-8 mt-8 text-3xl">
+        <a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306" target="_blank"><i class="fab fa-linkedin hover:text-cyan-400 transition"></i></a>
+        <a href="https://github.com/upadhyedharanendra9-hash" target="_blank"><i class="fab fa-github hover:text-cyan-400 transition"></i></a>
+      </div>
+      <p class="mt-12 text-xs text-zinc-500">© 2026 Dharanendra Upadhye • Built for recruiters</p>
+    </div>
+  </footer>
 
   <script>
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    // Mobile menu (add later if needed) + smooth scroll already handled by Tailwind
   </script>
 </body>
 </html>
