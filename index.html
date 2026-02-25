@@ -1,183 +1,129 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Dharanendra Portfolio</title>
-
-<style>
-body{
-margin:0;
-font-family:Arial;
-background:#f5f6fa;
-}
-
-.container{
-display:flex;
-}
-
-.sidebar{
-width:230px;
-background:#1e1e2f;
-color:white;
-height:100vh;
-padding:20px;
-position:fixed;
-}
-
-.sidebar ul{
-list-style:none;
-padding:0;
-}
-
-.sidebar li{
-padding:12px;
-cursor:pointer;
-border-radius:6px;
-}
-
-.sidebar li:hover{
-background:#34344a;
-}
-
-.menu-active{
-background:#6a11cb;
-}
-
-.main{
-margin-left:250px;
-padding:40px;
-width:100%;
-}
-
-.kpi{
-display:flex;
-gap:20px;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,0.1);
-}
-
-.project{
-background:white;
-padding:20px;
-margin-top:20px;
-border-radius:10px;
-}
-
-.section{
-display:none;
-}
-
-.active{
-display:block;
-}
-
-.bar{
-background:#ddd;
-height:10px;
-border-radius:5px;
-}
-
-.fill{
-height:100%;
-background:#6a11cb;
-}
-
-.sql{width:90%}
-.python{width:85%}
-.powerbi{width:80%}
-</style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dharanendra Upadhye | Data Analyst Fresher 2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <style>
+    body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0a0e17; color: #e2e8f0; }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%); }
+    .card { transition: all 0.4s ease; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.5); }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease-out; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
 </head>
+<body class="min-h-screen">
 
-<body>
+  <!-- Navbar -->
+  <nav class="fixed top-0 w-full bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-800">
+    <div class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+      <div class="text-2xl font-bold text-blue-400">Dharanendra</div>
+      <div class="flex gap-6">
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="Dharanendra_Data_Analyst.pdf" download class="bg-blue-600 hover:bg-blue-700 px-5 py-2 rounded-md">Download CV</a>
+      </div>
+    </div>
+  </nav>
 
-<div class="container">
+  <!-- Hero -->
+  <section class="hero min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+      <div class="fade-in">
+        <h1 class="text-5xl md:text-7xl font-bold">Hi, I'm Dharanendra Upadhye</h1>
+        <p class="text-3xl mt-4 text-blue-300">Data Analyst Fresher • Python • SQL • Power BI</p>
+        <p class="mt-6 text-lg max-w-lg">Firmware Engineer transitioning to Data Analysis. Expert in log data extraction, automation, and turning raw data into business insights.</p>
+        <div class="mt-10 flex gap-4">
+          <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-lg font-semibold">Explore Projects</a>
+          <a href="https://linkedin.com/in/dharanendra-upadhye-0b3a12306" target="_blank" class="border border-gray-600 hover:border-blue-400 px-8 py-4 rounded-lg">LinkedIn</a>
+        </div>
+      </div>
+      <div class="fade-in flex justify-center">
+        <img src="profile.jpeg" alt="Dharanendra" class="w-80 h-80 rounded-full border-8 border-blue-500/30 shadow-2xl">
+      </div>
+    </div>
+  </section>
 
-<div class="sidebar">
-<h2>Dharanendra</h2>
+  <!-- Projects -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+      <h2 class="text-5xl font-bold text-center mb-16 fade-in">My Projects</h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-<ul>
-<li onclick="showSection(event,'home')" class="menu-active">Home</li>
-<li onclick="showSection(event,'projects')">Projects</li>
-<li onclick="showSection(event,'experience')">Experience</li>
-<li onclick="showSection(event,'skills')">Skills</li>
-</ul>
-</div>
+        <!-- 1. Purchase -->
+        <div class="card bg-gray-800 rounded-xl overflow-hidden fade-in">
+          <div class="h-48 bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center text-6xl">📈</div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">Purchase Pattern Analysis</h3>
+            <p class="text-gray-400 mt-3">Analyzed customer transactions to identify patterns, trends, and high-value segments. Built interactive Power BI dashboard for KPIs (AOV, repeat rate).</p>
+            <p class="mt-4 text-sm text-blue-300">Impact: Potential 20-25% targeted marketing uplift</p>
+            <a href="purchase-pattern-analysis/" class="mt-6 block text-center bg-blue-600 hover:bg-blue-700 py-3 rounded-lg">View Details & Dashboard</a>
+          </div>
+        </div>
 
-<div class="main">
+        <!-- 2. Movie -->
+        <div class="card bg-gray-800 rounded-xl overflow-hidden fade-in">
+          <div class="h-48 bg-gradient-to-br from-purple-600 to-pink-600 flex items-center justify-center text-6xl">🎥</div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">Movie Database Analysis</h3>
+            <p class="text-gray-400 mt-3">In-depth SQL analysis on movie datasets: popularity, revenue, director productivity, genre trends.</p>
+            <p class="mt-4 text-sm text-purple-300">Impact: Insights for content strategy & performance benchmarking</p>
+            <a href="movie-database-analysis/" class="mt-6 block text-center bg-purple-600 hover:bg-purple-700 py-3 rounded-lg">View Queries & Insights</a>
+          </div>
+        </div>
 
-<div id="home" class="section active">
-<h1>Data Analyst Portfolio</h1>
+        <!-- 3. System Log -->
+        <div class="card bg-gray-800 rounded-xl overflow-hidden fade-in">
+          <div class="h-48 bg-gradient-to-br from-green-600 to-emerald-600 flex items-center justify-center text-6xl">🛠️</div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">System Log Analysis & Automation</h3>
+            <p class="text-gray-400 mt-3">Processed large device logs to detect failures & trends. Automated extraction & structuring with Python — reduced manual effort significantly.</p>
+            <p class="mt-4 text-sm text-green-300">Impact: 60-70% faster analysis from unstructured data</p>
+            <a href="system-log-analysis/" class="mt-6 block text-center bg-green-600 hover:bg-green-700 py-3 rounded-lg">View Scripts & Details</a>
+          </div>
+        </div>
 
-<div class="kpi">
-<div class="card"><h3>3+</h3><p>Projects</p></div>
-<div class="card"><h3>SQL + Python</h3><p>Core Skills</p></div>
-<div class="card"><h3>Firmware → Analytics</h3><p>Transition</p></div>
-</div>
-</div>
+        <!-- 4. CAN -->
+        <div class="card bg-gray-800 rounded-xl overflow-hidden fade-in">
+          <div class="h-48 bg-gradient-to-br from-orange-600 to-amber-600 flex items-center justify-center text-6xl">🔌</div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">CAN Data Communication & Validation</h3>
+            <p class="text-gray-400 mt-3">Validated structured packets in multi-node embedded systems. Automated comparison to detect anomalies & data loss.</p>
+            <p class="mt-4 text-sm text-orange-300">Impact: Ensured 100% data integrity in real device communication</p>
+            <a href="can-data-validation/" class="mt-6 block text-center bg-orange-600 hover:bg-orange-700 py-3 rounded-lg">View Project</a>
+          </div>
+        </div>
 
-<div id="projects" class="section">
-<h2>Projects</h2>
+        <!-- 5. Sensor -->
+        <div class="card bg-gray-800 rounded-xl overflow-hidden fade-in">
+          <div class="h-48 bg-gradient-to-br from-red-600 to-rose-600 flex items-center justify-center text-6xl">📡</div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold">Sensor Data Analysis & Testing Automation</h3>
+            <p class="text-gray-400 mt-3">Analyzed accelerometer/tilt sensor data. Automated capture, comparison & structuring for reporting.</p>
+            <p class="mt-4 text-sm text-red-300">Impact: Streamlined performance validation from raw outputs</p>
+            <a href="sensor-data-analysis/" class="mt-6 block text-center bg-red-600 hover:bg-red-700 py-3 rounded-lg">View Project</a>
+          </div>
+        </div>
 
-<div class="project">
-<h3>Purchase Pattern Analysis</h3>
-<p>Customer behavior & sales trends using SQL, Python, Power BI</p>
-</div>
+      </div>
+    </div>
+  </section>
 
-<div class="project">
-<h3>Movie Database Analysis</h3>
-<p>Revenue & popularity insights using SQL</p>
-</div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 py-12 text-center">
+    <p class="text-lg">Open to Data Analyst fresher roles in Bangalore, Coimbatore, Chennai, Hyderabad</p>
+    <p class="mt-4 text-gray-500">upadhyedharanendra9@gmail.com | +91 8762031009 | © 2026 Dharanendra Upadhye</p>
+  </footer>
 
-<div class="project">
-<h3>System Log Analysis</h3>
-<p>Automation & failure detection using Python</p>
-</div>
-</div>
-
-<div id="experience" class="section">
-<h2>Experience</h2>
-<p>Firmware Engineer — Bits N Bytes Soft Pvt Ltd</p>
-<p>Worked on CAN & UART log analysis, anomaly detection and automation.</p>
-</div>
-
-<div id="skills" class="section">
-<h2>Skills</h2>
-
-<p>SQL</p>
-<div class="bar"><div class="fill sql"></div></div>
-
-<p>Python</p>
-<div class="bar"><div class="fill python"></div></div>
-
-<p>Power BI</p>
-<div class="bar"><div class="fill powerbi"></div></div>
-
-</div>
-
-</div>
-</div>
-
-<script>
-function showSection(event,id){
-
-document.querySelectorAll('.section').forEach(section=>{
-section.classList.remove('active');
-});
-
-document.getElementById(id).classList.add('active');
-
-document.querySelectorAll('.sidebar li').forEach(li=>{
-li.classList.remove('menu-active');
-});
-
-event.target.classList.add('menu-active');
-}
-</script>
-
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
