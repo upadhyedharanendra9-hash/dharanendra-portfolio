@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <style>
+html { scroll-behavior: smooth; }
 body { font-family: 'Segoe UI', system-ui, sans-serif; }
 
 .hero {
@@ -23,6 +24,20 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; }
   box-shadow: 0 20px 40px rgba(0,255,255,0.1);
 }
 
+.nav-btn {
+  position: relative;
+  padding: 8px 14px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+}
+.nav-btn:hover {
+  background: #06b6d4;
+  color: black;
+}
+.nav-btn:active {
+  transform: scale(0.9);
+}
+
 @keyframes ring {
   0% { transform: rotate(0); }
   15% { transform: rotate(15deg); }
@@ -32,7 +47,6 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; }
   75% { transform: rotate(10deg); }
   100% { transform: rotate(0); }
 }
-
 .ringing {
   display: inline-block;
   animation: ring 1.5s infinite;
@@ -45,17 +59,28 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; }
 <!-- Navbar -->
 <nav class="fixed top-0 w-full bg-zinc-950/90 backdrop-blur-md z-50 border-b border-zinc-800">
   <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
     <div class="text-2xl font-bold text-cyan-400">Dharanendra Upadhye</div>
 
+    <div class="hidden md:flex gap-4 text-sm font-semibold">
+      <a href="#home" class="nav-btn">Home</a>
+      <a href="#skills" class="nav-btn">Skills</a>
+      <a href="#projects" class="nav-btn">Projects</a>
+      <a href="#experience" class="nav-btn">Experience</a>
+      <a href="#education" class="nav-btn">Education</a>
+      <a href="#strengths" class="nav-btn">Strengths</a>
+    </div>
+
     <a href="Dharanendra_Data_Analyst.pdf" download
-       class="bg-cyan-500 hover:bg-cyan-600 px-6 py-3 rounded-full font-semibold flex items-center gap-2">
-      <i class="fas fa-download"></i> Download CV
+       class="bg-cyan-500 hover:bg-cyan-600 px-5 py-2 rounded-full font-semibold">
+      Download CV
     </a>
+
   </div>
 </nav>
 
 <!-- Hero -->
-<section class="hero min-h-screen flex items-center pt-20">
+<section id="home" class="hero min-h-screen flex items-center pt-20">
   <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
 
     <div>
@@ -89,8 +114,8 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; }
   </div>
 </section>
 
-<!-- Technical Skills -->
-<section class="bg-zinc-900 py-16">
+<!-- Skills -->
+<section id="skills" class="bg-zinc-900 py-16">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-4xl font-bold mb-10 text-cyan-400">Technical Skills</h2>
 
@@ -131,12 +156,11 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; }
 </section>
 
 <!-- Projects -->
-<section class="py-16">
+<section id="projects" class="py-16">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-4xl font-bold mb-10 text-cyan-400">Projects</h2>
 
     <div class="grid md:grid-cols-2 gap-8">
-
       <div class="bg-zinc-800 p-6 rounded-2xl card">
         <h3 class="text-xl font-semibold mb-3">Purchase Pattern Analysis</h3>
         <p class="text-zinc-300">Customer purchase trend analysis using Python, SQL and Power BI dashboards.</p>
@@ -144,28 +168,29 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; }
 
       <div class="bg-zinc-800 p-6 rounded-2xl card">
         <h3 class="text-xl font-semibold mb-3">Movie Database Analysis</h3>
-        <p class="text-zinc-300">Advanced SQL-based business insights extraction from structured movie datasets.</p>
+        <p class="text-zinc-300">Advanced SQL-based business insights extraction.</p>
       </div>
 
       <div class="bg-zinc-800 p-6 rounded-2xl card">
         <h3 class="text-xl font-semibold mb-3">System Log Analysis & Automation</h3>
-        <p class="text-zinc-300">Automated log processing and structured dataset generation using Python.</p>
+        <p class="text-zinc-300">Automated log processing and structured dataset generation.</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- Professional Experience -->
-<section class="bg-zinc-900 py-16">
+<!-- Experience -->
+<section id="experience" class="bg-zinc-900 py-16">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-4xl font-bold mb-10 text-cyan-400">Professional Experience</h2>
 
     <div class="bg-zinc-800 p-6 rounded-2xl card">
-      <h3 class="text-xl font-semibold">Firmware Engineer — Bits N Bytes Soft Pvt. Ltd.</h3>
-      <p class="text-cyan-400 mb-4">Jun 2024 – Present</p>
-      <p class="text-zinc-300">
-        Extracted and validated embedded operational data, automated testing using Python,
+      <h3 class="text-xl font-semibold">
+        Firmware Engineer — Bits N Bytes Soft Pvt. Ltd.
+      </h3>
+      <p class="text-cyan-400">Jun 2024 – Present</p>
+      <p class="text-zinc-300 mt-3">
+        Extracted embedded operational data, automated testing with Python,
         worked with CAN & UART streams, ensured structured cloud-ready datasets.
       </p>
     </div>
@@ -173,7 +198,7 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; }
 </section>
 
 <!-- Education -->
-<section class="py-16">
+<section id="education" class="py-16">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-4xl font-bold mb-10 text-cyan-400">Education</h2>
 
@@ -186,7 +211,7 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; }
 </section>
 
 <!-- Strengths -->
-<section class="bg-zinc-900 py-16">
+<section id="strengths" class="bg-zinc-900 py-16">
   <div class="max-w-7xl mx-auto px-6">
     <h2 class="text-4xl font-bold mb-10 text-cyan-400">Strengths</h2>
 
@@ -199,7 +224,6 @@ body { font-family: 'Segoe UI', system-ui, sans-serif; }
   </div>
 </section>
 
-<!-- Footer -->
 <footer class="bg-black py-12 text-center text-zinc-500">
   <p>Open to Data Analyst fresher opportunities</p>
   <p class="mt-2">upadhyedharanendra9@gmail.com | +91 8762031009</p>
